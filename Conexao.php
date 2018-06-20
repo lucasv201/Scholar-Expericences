@@ -10,10 +10,10 @@ class Conexao{
 	public function __construct(){
 		try{
 			// Endereço da Conexão
-			$servidor = "ntectreinamentos.com.br";
-			$usr = "ntect391_venanci";
-			$pwd = "venancio2017";
-			$bd = "ntect391_venancio";
+			$servidor = "127.0.0.1";
+			$usr = "root";
+			$pwd = "";
+			$bd = "comentario";
 			$this->setCon(new PDO("mysql:host=$servidor;dbname=$bd",$usr,$pwd));
 			$this->con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION); // Erros em exceções
 		}catch(PDOException $ex){
